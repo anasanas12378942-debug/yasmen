@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تسجيل الدخول | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .auth-wrap{max-width:500px;margin:65px auto;padding:0 18px}
+    .auth-card{background:white;border:1px solid var(--border);border-radius:18px;padding:35px;box-shadow:0 12px 35px #173b7010}
+    .auth-card h1{color:var(--navy);margin-bottom:8px}
+    .auth-card>p{color:var(--muted);margin-bottom:28px}
+    .field{margin-bottom:20px}
+    .field label{display:block;font-weight:700;margin-bottom:8px}
+    .field input{width:100%;padding:14px;border:1px solid var(--border);border-radius:9px;font-size:15px}
+    .field input:focus{outline:1px solid var(--blue)}
+    .auth-submit{width:100%;border:0;margin-top:8px}
+    .auth-links{text-align:center;margin-top:23px;color:var(--muted);font-size:14px}
+    .auth-links a{color:var(--blue);font-weight:700}
+    .form-message{margin-top:15px;font-size:14px}
+    @media(max-width:520px){.auth-card{padding:24px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>YASMIN AL-SHAM</small></span>
+    </a>
+    <a href="/" class="btn btn-light">الرئيسية</a>
+  </header>
+
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <h1>أهلاً بعودتك</h1>
+      <p>سجّل الدخول للوصول إلى حسابك.</p>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="contact">رقم الهاتف أو البريد الإلكتروني</label>
+          <input id="contact" name="contact" required autocomplete="username">
+        </div>
+
+        <div class="field">
+          <label for="password">كلمة المرور</label>
+          <input id="password" name="password" type="password" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="btn btn-primary auth-submit">تسجيل الدخول</button>
+        <div id="formMessage" class="form-message" role="status"></div>
+      </form>
+
+      <div class="auth-links">
+        ليس لديك حساب؟ <a href="/register.html">إنشاء حساب جديد</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/login.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/password-visibility.js"></script>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

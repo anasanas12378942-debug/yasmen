@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سجل نشاط الأعضاء | ياسمين الشام</title>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+.activity-page{max-width:1200px;margin:30px auto;padding:20px}
+.activity-tools{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.activity-tools input,.activity-tools select{padding:12px;border:1px solid #dce3ed;border-radius:9px}
+.activity-table-wrap{overflow-x:auto;background:white;border:1px solid #e2e8f0;border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:850px}
+th,td{padding:13px;text-align:right;border-bottom:1px solid #e8edf3;font-size:14px}
+th{background:#f5f7fa;color:#173e70}
+td{color:#334155}
+.activity-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px}
+#activityMessage{color:#64748b;margin:15px 0}
+@media print { .topbar,.activity-tools,.activity-actions,#exportActivity,#printActivity { display:none !important; } .activity-page { max-width:none; margin:0; padding:0; } .activity-table-wrap { overflow:visible; border:0; } table { min-width:0; } th,td { font-size:10px; padding:7px; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="/admin.html">
+<span class="brand-mark">Y</span>
+<span><strong>ياسمين الشام</strong><small>لوحة الإدارة</small></span>
+</a>
+<a class="btn btn-light" href="/admin.html">العودة للإدارة</a>
+</header>
+<main class="activity-page">
+<h1>سجل نشاط الأعضاء</h1>
+<p>متابعة عمليات الدخول والتعديلات وطلبات الإيداع والسحب.</p>
+<div class="activity-tools">
+<input id="userIdFilter" type="number" min="1" placeholder="رقم العضو">
+<label>??: <input id="dateFrom" type="date"></label><label>???: <input id="dateTo" type="date"></label><select id="typeFilter">
+<option value="">كل الأنشطة</option>
+<option value="login">تسجيل الدخول</option>
+<option value="logout">تسجيل الخروج</option>
+<option value="password_changed">تغيير كلمة المرور</option>
+<option value="profile_updated">تعديل الملف الشخصي</option>
+<option value="deposit_requested">طلب إيداع</option>
+<option value="withdrawal_requested">طلب سحب</option>
+</select>
+<button id="filterButton" class="btn btn-primary">بحث</button>
+</div>
+<div id="activityMessage" role="status">جاري تحميل السجل...</div>
+<button id="exportActivity" class="btn btn-primary" type="button">تصدير السجل إلى Excel</button>
+<button id="printActivity" class="btn btn-light" type="button">????? ??????? / PDF</button>
+<div class="activity-table-wrap">
+<table>
+<thead>
+<tr><th>التاريخ</th><th>رقم العضو</th><th>نوع النشاط</th><th>عنوان الاتصال</th><th>التفاصيل</th></tr>
+</thead>
+<tbody id="activityRows"></tbody>
+</table>
+</div>
+<div class="activity-actions">
+<button id="previousButton" class="btn btn-light" disabled>السابق</button>
+<span id="pageInfo">صفحة 1</span>
+<button id="nextButton" class="btn btn-light" disabled>التالي</button>
+</div>
+</main>
+<script src="/js/admin-activity.js"></script>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

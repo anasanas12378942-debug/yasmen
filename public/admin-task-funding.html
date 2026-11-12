@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تمويل مكافآت المهام | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .fund-page{max-width:1000px;margin:30px auto;padding:20px}
+    .fund-panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:20px;margin:20px 0}
+    .fund-panel label{display:block;margin:12px 0 6px}
+    .fund-panel input,.fund-panel textarea{width:100%;padding:12px;border:1px solid #d5dce5;border-radius:8px}
+    .fund-stats{font-size:25px;font-weight:bold;margin:12px 0}
+    .task-row{border:1px solid #e2e8f0;border-radius:10px;padding:15px;margin:12px 0}
+    .task-row button{margin-top:10px}
+    .fund-warning{background:#fff7e6;border:1px solid #f0d28a;border-radius:9px;padding:13px}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/admin.html">
+    <span class="brand-mark">Y</span>
+    <span><strong>ياسمين الشام</strong><small>تمويل مكافآت المهام</small></span>
+  </a>
+  <a class="btn btn-light" href="/admin.html">لوحة الإدارة</a>
+</header>
+
+<main class="fund-page">
+  <h1>تمويل مكافآت المهام</h1>
+
+  <section class="fund-panel">
+    <h2>رصيد التمويل المسجّل</h2>
+    <div class="fund-stats" id="totalFunding">$0.00</div>
+    <p id="fundingMessage" role="status"></p>
+  </section>
+
+  <section class="fund-panel">
+    <h2>تسجيل تمويل جديد</h2>
+    <div class="fund-warning">
+      سجّل فقط الأموال التي وصلت فعلياً وتم تخصيصها لتمويل مكافآت المهام.
+    </div>
+    <form id="fundingForm">
+      <label for="fundAmount">المبلغ بالدولار</label>
+      <input id="fundAmount" type="number" min="0.01" step="0.01" required>
+      <label for="fundSource">مصدر التمويل</label>
+      <input id="fundSource" type="text" maxlength="200" required>
+      <label for="fundReference">مرجع أو ملاحظات التوثيق</label>
+      <textarea id="fundReference" maxlength="1000"></textarea>
+      <button class="btn btn-primary" type="submit">تسجيل مبلغ التمويل</button>
+    </form>
+  </section>
+
+  <section class="fund-panel">
+    <h2>مكافآت المهام المعلقة</h2>
+    <button class="btn btn-light" id="refreshTasks" type="button">تحديث القائمة</button>
+    <div id="tasksList" aria-live="polite">جاري تحميل المهام...</div>
+  </section>
+</main>
+
+<script src="/js/admin-task-funding.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+<section id="rewardFundingSummary" style="margin:20px 0;padding:20px;border:1px solid #ddd;border-radius:12px;background:#fff">
+  <h2>ملخص تمويل المكافآت</h2>
+  <p>إجمالي التمويل: <strong id="summaryTotal">...</strong></p>
+  <p>المكافآت المصروفة: <strong id="summaryUsed">...</strong></p>
+  <p>التمويل المتبقي: <strong id="summaryRemaining">...</strong></p>
+</section>
+<script src="/js/reward-funding-summary.js"></script>
+<section id="rewardFundingHistory" style="margin:20px 0;padding:20px;border:1px solid #ddd;border-radius:12px;background:#fff">
+  <h2>سجل تمويل المكافآت</h2>
+  <p>جاري تحميل السجل...</p>
+</section>
+<script src="/js/admin-funding-history.js"></script>
+</body>
+</html>

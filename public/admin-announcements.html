@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>إدارة الإعلانات | ياسمين الشام</title>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+.page{max-width:950px;margin:30px auto;padding:20px}
+.panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin-top:20px}
+.panel input,.panel textarea{width:100%;padding:13px;margin:10px 0;border:1px solid #dce3ed;border-radius:9px;font:inherit}
+.panel textarea{min-height:130px;resize:vertical}
+.notice{padding:16px;border-bottom:1px solid #e5e7eb}
+.notice p{white-space:pre-wrap}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="/admin.html"><span class="brand-mark">Y</span><span><strong>ياسمين الشام</strong><small>لوحة الإدارة</small></span></a>
+<a class="btn btn-light" href="/admin.html">العودة للإدارة</a>
+</header>
+<main class="page">
+<h1>إعلانات المنصة</h1>
+<section class="panel">
+<h2>نشر إعلان جديد</h2>
+<form id="announcementForm">
+<input id="announcementTitle" maxlength="150" placeholder="عنوان الإعلان" required>
+<textarea id="announcementBody" maxlength="5000" placeholder="اكتب تفاصيل الإعلان..." required></textarea>
+<button class="btn btn-primary" type="submit">نشر الإعلان لجميع الأعضاء</button>
+</form>
+<p id="formMessage" role="status"></p>
+</section>
+<section class="panel">
+<h2>الإعلانات المنشورة</h2>
+<div id="announcementList">جاري التحميل...</div>
+</section>
+</main>
+<script src="/js/admin-announcements.js"></script>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

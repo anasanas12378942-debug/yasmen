@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173b70">
+  <title>ياسمين الشام | المنصة الرقمية</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .home-visuals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:540px;margin:auto}
+    .home-photo{position:relative;min-height:180px;border-radius:17px;overflow:hidden;background:#173b70;box-shadow:0 8px 24px #142d501c}
+    .home-photo img{width:100%;height:100%;min-height:180px;object-fit:cover;display:block;transition:transform .4s}
+    .home-photo:hover img{transform:scale(1.06)}
+    .home-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#07182de8,transparent 75%)}
+    .home-photo-caption{position:absolute;z-index:1;bottom:15px;right:16px;left:12px;color:white}
+    .home-photo-caption strong{display:block;font-size:18px;margin-bottom:4px}
+    .home-photo-caption small{font-size:12px;color:#e8edf5}
+    .home-photo-date{font-size:14px!important;line-height:1.7}
+    .home-highlights{padding:35px 20px;max-width:1150px;margin:auto}
+    .home-highlights h2{color:#173b70;margin-bottom:8px}
+    .home-highlights .intro{color:#758398;margin-bottom:22px}
+    @media(max-width:600px){.home-visuals{gap:9px}.home-photo,.home-photo img{min-height:145px}.home-photo-caption strong{font-size:15px}.home-photo-caption{right:11px;bottom:11px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">Y</span>
+      <span>
+        <strong id="platformName">ياسمين الشام</strong>
+        <small>YASMIN AL-SHAM</small>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button id="languageButton" class="btn btn-light">English</button>
+      <a href="/login.html" class="btn btn-primary" data-i18n="login">تسجيل الدخول</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow" data-i18n="welcome">مرحباً بك في ياسمين الشام</span>
+        <h1 data-i18n="heroTitle">منصتك الرقمية<br><span>في مكان واحد</span></h1>
+        <p id="platformDescription">منصة رقمية لإدارة الحساب والمهام والفريق والسجل المالي.</p>
+        <div class="hero-actions">
+          <a href="/register.html" class="btn btn-gold" data-i18n="createAccount">إنشاء حساب</a>
+          <a href="/login.html" class="btn btn-outline" data-i18n="enterAccount">دخول الأعضاء</a>
+        </div>
+        <p class="notice">هذه المنصة لا تمثل وسيط تداول مرخصاً، والأرصدة المعروضة سجلات داخلية وليست ضماناً لأرباح أو عوائد.</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="home-visuals">
+          <article class="home-photo">
+            <img src="https://images.unsplash.com/photo-1771736006753-d911e5115a56?auto=format&fit=crop&w=900&q=85" alt="أوراق نقدية من الدولار الأمريكي" loading="eager">
+            <div class="home-photo-caption">
+              <strong>الدولار الأمريكي</strong>
+              <small>USD · العملة المرجعية</small>
+            </div>
+          </article>
+
+          <article class="home-photo">
+            <img src="https://images.unsplash.com/photo-1749492795606-51d9898710ca?auto=format&fit=crop&w=900&q=85" alt="عملة بيتكوين ذهبية بتصوير واقعي" loading="eager">
+            <div class="home-photo-caption">
+              <strong>البيتكوين</strong>
+              <small>Bitcoin · BTC</small>
+            </div>
+          </article>
+
+          <article class="home-photo">
+            <img src="https://images.unsplash.com/photo-1762463176318-3cc33ec64ba2?auto=format&fit=crop&w=900&q=85" alt="سبائك ذهب حقيقية" loading="lazy">
+            <div class="home-photo-caption">
+              <strong>الذهب والمعادن</strong>
+              <small>Gold & Precious Metals</small>
+            </div>
+          </article>
+
+          <article class="home-photo">
+            <img src="https://images.unsplash.com/photo-1718815628185-2ff0f9332b32?auto=format&fit=crop&w=900&q=85" alt="تقويم مكتبي" loading="lazy">
+            <div class="home-photo-caption">
+              <strong>اليوم والتاريخ</strong>
+              <small id="todayDate" class="home-photo-date">جاري تحميل التاريخ...</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-highlights">
+      <h2>نظرة على المؤشرات</h2>
+      <p class="intro">صور واقعية ومعلومات السوق في مكان واحد.</p>
+    </section>
+
+    <section class="features">
+      <div class="section-heading">
+        <span class="eyebrow">PLATFORM SERVICES</span>
+        <h2 data-i18n="servicesTitle">خدمات المنصة</h2>
+        <p data-i18n="servicesDescription">كل أدوات حسابك وإدارة نشاطك في واجهة واحدة.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span>◈</span><h3>لوحة الحساب</h3><p>ملخص الحساب والحركات المالية.</p></article>
+        <article class="feature-card"><span>◎</span><h3>المهام اليومية</h3><p>عرض المهام وسجل الإنجاز.</p></article>
+        <article class="feature-card"><span>♧</span><h3>الفريق والدعوات</h3><p>متابعة الفريق ورموز الدعوة.</p></article>
+        <article class="feature-card"><span>◇</span><h3>الدعم والمراسلة</h3><p>التواصل مع فريق الدعم.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>YASMIN AL-SHAM</strong>
+    <p>© 2026 جميع الحقوق محفوظة.</p>
+    <a href="/terms.html">الشروط والأحكام</a> |
+    <a href="/privacy.html">سياسة الخصوصية</a> |
+    <a href="/faq.html">الأسئلة الشائعة</a> |
+    <a href="/about.html">من نحن</a> |
+    <a href="/contact.html">تواصل معنا</a>
+  </footer>
+
+  <script>
+    (() => {
+      const dateElement = document.getElementById("todayDate");
+      if (!dateElement) return;
+      dateElement.textContent = new Intl.DateTimeFormat("ar-SY", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "Asia/Damascus"
+      }).format(new Date());
+    })();
+  </script>
+  <script src="/js/app.js"></script>
+  <script src="/js/markets.js"></script>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

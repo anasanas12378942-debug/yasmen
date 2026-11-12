@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>السحوبات | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .withdraw-page{max-width:850px;margin:35px auto;padding:20px}
+    .withdraw-card{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin-top:22px}
+    .withdraw-card label{display:block;margin:15px 0 7px}
+    .withdraw-card input{width:100%;padding:12px;border:1px solid #d5dce5;border-radius:8px}
+    .withdraw-result{background:#f5f8fc;padding:15px;border-radius:9px;margin-top:15px;line-height:2}
+    .withdraw-result strong{color:#173e70}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>YASMIN AL-SHAM</small></span>
+    </a>
+    <a class="btn btn-light" href="/dashboard.html">العودة للوحة العضو</a>
+  </header>
+
+  <main class="withdraw-page">
+    <h1>طلبات السحب</h1>
+    <p>تقديم طلب سحب ومتابعة حالته.</p>
+
+    <section class="withdraw-card">
+      <h2>طلب سحب جديد</h2>
+
+      <label for="withdrawAmount">المبلغ المطلوب بالدولار</label>
+      <input id="withdrawAmount" type="number" min="100" step="0.01" placeholder="الحد الأدنى 100 دولار">
+
+      <label for="barcodeFile">باركود شام كاش الخاص بك</label>
+      <input id="barcodeFile" type="file" accept="image/jpeg,image/png,image/webp">
+
+      <div class="withdraw-result">
+        المبلغ المطلوب: <strong id="grossAmount">$0.00</strong><br>
+        رسوم السحب 10%: <strong id="withdrawFee">$0.00</strong><br>
+        صافي المبلغ: <strong id="netAmount">$0.00</strong>
+      </div>
+
+      <button id="withdrawButton" class="btn btn-primary" type="button" style="margin-top:18px">
+        تقديم طلب السحب
+      </button>
+
+      <p id="withdrawMessage" role="status"></p>
+    </section>
+
+    <section class="withdraw-card">
+      <h2>سجل السحوبات</h2>
+      <div id="withdrawHistory">جاري تحميل الطلبات...</div>
+    </section>
+  </main>
+
+  <script src="/js/withdrawals.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

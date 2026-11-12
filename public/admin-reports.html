@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>التقارير المالية | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-page{max-width:1000px;margin:30px auto;padding:20px}
+    .panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:20px;margin-top:20px}
+    .report-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+    .report-item{background:#f5f8fc;border-radius:10px;padding:18px}
+    .report-item strong{display:block;font-size:24px;margin-top:10px}
+    .filters{display:flex;gap:10px;flex-wrap:wrap}
+    .filters input{padding:10px;border:1px solid #d5dce5;border-radius:8px}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>التقارير المالية</small></span>
+    </a>
+    <a class="btn btn-light" href="/admin.html">لوحة الإدارة</a>
+  </header>
+
+  <main class="admin-page">
+    <h1>التقارير المالية</h1>
+
+    <section class="panel">
+      <h2>الفترة المطلوبة</h2>
+      <div class="filters">
+        <input type="date" id="startDate" aria-label="من تاريخ">
+        <input type="date" id="endDate" aria-label="إلى تاريخ">
+        <button class="btn btn-primary" id="loadReport" type="button">عرض التقرير</button>
+        <button class="btn btn-light" id="printReport" type="button">طباعة التقرير</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>الملخص المالي</h2>
+      <div class="report-grid">
+        <div class="report-item">الإيداعات<strong id="depositsTotal">—</strong></div>
+        <div class="report-item">السحوبات<strong id="withdrawalsTotal">—</strong></div>
+        <div class="report-item">الأرباح الممولة<strong id="profitsTotal">—</strong></div>
+        <div class="report-item">المستخدمون<strong id="usersTotal">—</strong></div>
+      </div>
+      <p id="reportMessage" role="status"></p>
+    </section>
+  </main>
+
+  <script src="/js/admin-reports.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

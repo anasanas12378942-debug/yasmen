@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فريقي ودعواتي | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .team-page{max-width:900px;margin:35px auto;padding:20px}
+    .team-card{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin-top:20px}
+    .team-code{font-size:25px;font-weight:bold;color:#173e70;overflow-wrap:anywhere}
+    .team-progress{height:12px;background:#e8edf4;border-radius:20px;overflow:hidden;margin:15px 0}
+    .team-progress span{display:block;height:100%;width:0;background:#15945b}
+    .team-member{padding:14px 0;border-bottom:1px solid #edf1f5}
+    .team-muted{color:#718096}
+  </style>
+<link rel="stylesheet" href="/css/team-members.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>YASMIN AL-SHAM</small></span>
+    </a>
+    <a class="btn btn-light" href="/dashboard.html">العودة للوحة العضو</a>
+  </header>
+
+  <main class="team-page">
+    <h1>فريقي ودعواتي</h1>
+    <p class="team-muted">تابع أعضاء فريقك ورمز الدعوة الخاص بك.</p>
+
+    <section class="team-card">
+      <h2>رمز الدعوة الخاص بك</h2>
+      <div class="team-code" id="inviteCode">جاري التحميل...</div>
+      <p class="team-muted">يمكنك مشاركة الرمز مع من تريد دعوته.</p>
+      <button class="btn btn-primary" id="copyInvite" type="button">نسخ رمز الدعوة</button>
+      <p id="copyMessage" role="status"></p>
+    </section>
+
+    <section class="team-card">
+      <h2>تقدم الفريق</h2>
+      <div class="team-code" id="teamCount">0 / 5</div>
+      <div class="team-progress"><span id="teamProgress"></span></div>
+      <p id="teamStatus" class="team-muted">جاري تحميل بيانات الفريق...</p>
+    </section>
+
+    <section class="team-card">
+      <h2>أعضاء الفريق</h2>
+      <div id="teamMembers">جاري تحميل الأعضاء...</div>
+    </section>
+
+    <p id="teamMessage" class="team-muted" role="status"></p>
+  </main>
+
+  <script src="/js/team.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+<section id="teamMembersPanel"><h2>أعضاء فريقي</h2><p>جاري تحميل بيانات الفريق...</p></section>
+<script src="/js/team-members.js"></script>
+</body>
+</html>

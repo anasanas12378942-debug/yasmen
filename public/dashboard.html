@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة العضو | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .dashboard{max-width:1150px;margin:35px auto;padding:0 20px}
+    .dash-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px;flex-wrap:wrap}
+    .dash-heading h1{color:var(--navy)}
+    .dash-heading p{color:var(--muted)}
+    .dash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .dash-card{background:white;border:1px solid var(--border);border-radius:15px;padding:22px}
+    .dash-card small{color:var(--muted)}
+    .dash-card h2{color:var(--navy);font-size:27px;margin-top:8px;overflow-wrap:anywhere}
+    .dash-card p{color:var(--muted);font-size:13px}
+    .dash-links{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:25px}
+    .dash-link{background:white;border:1px solid var(--border);border-radius:12px;padding:18px;color:var(--navy);font-weight:700;text-align:center;text-decoration:none}
+    .dash-link:hover{border-color:var(--blue);transform:translateY(-2px)}
+    .dash-message{margin-top:20px;padding:15px;background:white;border:1px solid var(--border);border-radius:10px;color:var(--muted)}
+    @media(max-width:750px){.dash-grid{grid-template-columns:repeat(2,1fr)}.dash-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:450px){.dash-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>YASMIN AL-SHAM</small></span>
+    </a>
+    <button id="logoutButton" class="btn btn-light" type="button">تسجيل الخروج</button>
+  </header>
+
+  <a href="/market.html" class="market-entry" style="display:block;margin:18px 0;padding:18px;background:#172b4d;color:white;border-radius:12px;text-decoration:none;text-align:center">
+  <strong style="font-size:20px">📈 دخول السوق</strong>
+  <div style="margin-top:7px">تصفح الأصول وتابع الأسعار والمفضلة</div>
+</a>
+<a href="/portfolio.html" style="display:block;margin:15px 0;padding:16px;background:#244a7c;color:white;text-align:center;border-radius:10px;text-decoration:none">💼 محفظتي</a>
+<main class="dashboard">
+    <div class="dash-heading">
+      <div>
+        <h1>لوحة حسابك</h1>
+        <p>أهلاً بك في منصة ياسمين الشام</p>
+      </div>
+      <span id="memberStatus" class="btn btn-light">جاري تحميل الحساب...</span>
+    </div>
+
+    
+<section id="dashboardTaskProgress" style="background:white;border:1px solid #e2e8f0;border-radius:14px;padding:20px;margin:25px 0">
+  <h2 style="color:#173e70">????? ?????? ?????</h2>
+  <p id="dashboardProgressText">???? ????? ??????...</p>
+  <div style="height:12px;background:#e9eef5;border-radius:20px;overflow:hidden">
+    <div id="dashboardProgressBar" style="height:100%;width:0%;background:#15945b"></div>
+  </div>
+  <a href="/tasks.html" class="btn btn-primary" style="display:inline-block;margin-top:15px">???????? ??? ??????</a>
+</section>
+\n
+<section id="lastLoginCard" style="background:white;border:1px solid #e2e8f0;border-radius:12px;padding:18px;margin:18px 0">
+  <h3 style="color:#173e70">??? ????? ????</h3>
+  <p id="lastLoginInfo">???? ????? ?????????...</p>
+</section>
+\n<section class="dash-grid">
+  <article class="dash-card">
+    <small>المتاح من المكافآت الممولة</small>
+    <h2 id="fundedProfit">$0.00</h2>
+    <p>المبلغ المتاح بعد خصم الحجوزات.</p>
+  </article>
+  <article class="dash-card">
+    <small>أصل الإيداعات</small>
+    <h2 id="depositBalance">$0.00</h2>
+    <p>رأس المال المسجل في حسابك.</p>
+  </article>
+  <article class="dash-card">
+    <small>المكافآت بانتظار التمويل</small>
+    <h2 id="pendingRewards">$0.00</h2>
+    <p>مكافآت قديمة لم تمول بعد.</p>
+  </article>
+  <article class="dash-card">
+    <small>المبالغ المحجوزة للسحب</small>
+    <h2 id="reservedWithdrawals">$0.00</h2>
+    <p>طلبات سحب قيد المعالجة.</p>
+  </article>
+  <article class="dash-card">
+    <small>طلبات الإيداع المعلقة</small>
+    <h2 id="pendingDeposits">$0.00</h2>
+    <p>بانتظار مراجعة الإدارة.</p>
+  </article>
+  <article class="dash-card">
+    <small>طلبات السحب المعلقة</small>
+    <h2 id="pendingWithdrawals">$0.00</h2>
+    <p>بانتظار إتمام الإجراءات.</p>
+  </article>
+  <article class="dash-card">
+    <small>عدد أعضاء الفريق</small>
+    <h2 id="teamCount">0 / 5</h2>
+    <p>تقدم الفريق الحالي.</p>
+  </article>
+  <article class="dash-card">
+    <small>رمز الدعوة الخاص بك</small>
+    <h2 id="inviteCode">—</h2>
+<button id="copyInviteCode" class="btn btn-light" type="button">نسخ رمز الدعوة</button>
+<button id="shareInviteCode" class="btn btn-primary" type="button">مشاركة عبر واتساب</button><button id="copyInviteLink" class="btn btn-light" type="button">نسخ رابط الدعوة</button>
+    <p>استخدمه لدعوة أعضاء جدد.</p>
+  </article>
+</section>
+
+    <section class="dash-links" aria-label="أقسام حساب العضو">
+      <a class="dash-link" href="/tasks.html">المهام اليومية</a>
+      <a class="dash-link" href="/deposits.html">الإيداعات</a>
+      <a class="dash-link" href="/withdrawals.html">السحوبات</a>
+      <a class="dash-link" href="/team.html">فريقي ودعواتي</a>
+      <a class="dash-link" href="/statement.html">كشف الحساب</a>
+      <a class="dash-link" href="/activity.html">سجل النشاط</a>
+      <a class="dash-link" href="/profile.html">ملفي الشخصي</a>
+      <a class="dash-link" href="/chat.html">الدردشة</a>
+      <a class="dash-link" href="/support.html">مركز المساعدة</a>
+      <a class="dash-link" href="/notifications.html">إشعاراتي</a>
+    </section>
+
+    <div id="dashboardMessage" class="dash-message" role="status">
+      جاري تحميل بيانات حسابك...
+    </div>
+  </main>
+
+  <footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+    <a href="/terms.html">الشروط والأحكام</a>
+    <span style="margin:0 12px">|</span>
+    <a href="/privacy.html">سياسة الخصوصية</a>
+    <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+    <span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+    <span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+    <span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+  </footer>
+
+  <script src="/js/dashboard.js"></script>
+<a class="dash-link" href="/announcements.html">??????? ??????</a>
+<script src="/js/announcement-badge.js"></script>
+<script src="/js/dashboard-task-progress.js"></script>\n<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+<script src="/js/last-login.js"></script>\n<section id="dailyTaskSummary" style="margin:20px 0;padding:20px;border:1px solid #ddd;border-radius:14px;background:#fff">
+  <h2>إنجاز مهامي اليوم</h2>
+  <p>جاري تحميل الملخص...</p>
+</section>
+<script src="/js/daily-task-summary.js"></script>
+<link rel="stylesheet" href="/css/task-achievements.css">
+<script src="/js/task-achievements.js"></script>
+</body>
+</html>

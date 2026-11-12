@@ -1,0 +1,22 @@
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.achievement-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+.achievement-item p {
+  margin: 8px 0;
+}
+.achievement-item.unlocked {
+  background: #edf8f1;
+  border-color: #78b995;
+}
+.achievement-item.locked {
+  background: #f5f5f5;
+  opacity: .75;
+}

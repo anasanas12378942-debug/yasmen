@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>سجل الموافقات | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html"><strong>ياسمين الشام - الإدارة</strong></a>
+    <a class="btn btn-light" href="/admin.html">العودة</a>
+  </header>
+  <main style="max-width:1100px;margin:35px auto;padding:20px">
+    <h1>سجل موافقات الأعضاء</h1>
+    <p id="consentMessage">جاري تحميل البيانات...</p>
+    <div style="overflow-x:auto">
+      <table>
+        <thead>
+          <tr>
+            <th>رقم العضو</th>
+            <th>وسيلة التواصل</th>
+            <th>موافقة الشروط</th>
+            <th>موافقة الخصوصية</th>
+            <th>إصدار الشروط</th>
+            <th>إصدار الخصوصية</th>
+          </tr>
+        </thead>
+        <tbody id="consentRows"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="/js/admin-consents.js"></script>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

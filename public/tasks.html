@@ -1,0 +1,105 @@
+عند إنجاز المهمة تضاف المكافأة مباشرة إلى رصيدك الممول إذا كان التمويل الفعلي المسجل كافيا. طلب السحب يحتاج موافقة المدير ولا يعد مدفوعا إلا بعد تحويل المبلغ فعليا.<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المهام اليومية | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .tasks-page{max-width:950px;margin:35px auto;padding:20px}
+    .tasks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}
+    .task-card{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:20px}
+    .task-card h2{color:#173e70}
+    .task-card p{color:#718096}
+    .task-reward{font-size:25px;font-weight:bold;color:#15945b;margin:15px 0}
+    .task-status{margin-top:12px;font-size:14px}
+    .task-history{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:20px;margin-top:25px}
+    @media(max-width:700px){.tasks-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>YASMIN AL-SHAM</small></span>
+    </a>
+    <a class="btn btn-light" href="/dashboard.html">العودة للوحة العضو</a>
+  </header>
+
+  <main class="tasks-page">
+    <h1>المهام اليومية</h1>
+    <p>تابع الفترات اليومية وحالة إنجاز كل مهمة.</p>
+
+    <div class="tasks-grid">
+      <article class="task-card">
+        <h2>المهمة الأولى</h2>
+        <p>الفترة الصباحية</p>
+        <strong>09:00 صباحاً</strong>
+        <div class="task-reward">$5.00</div>
+        <button class="btn btn-primary task-button" data-slot="9">تنفيذ المهمة</button>
+        <div class="task-status" id="status-9">جاري التحميل...</div>
+      </article>
+
+      <article class="task-card">
+        <h2>المهمة الثانية</h2>
+        <p>فترة الظهيرة</p>
+        <strong>03:00 عصراً</strong>
+        <div class="task-reward">$5.00</div>
+        <button class="btn btn-primary task-button" data-slot="15">تنفيذ المهمة</button>
+        <div class="task-status" id="status-15">جاري التحميل...</div>
+      </article>
+
+      <article class="task-card">
+        <h2>المهمة الثالثة</h2>
+        <p>الفترة المسائية</p>
+        <strong>09:00 مساءً</strong>
+        <div class="task-reward">$5.00</div>
+        <button class="btn btn-primary task-button" data-slot="21">تنفيذ المهمة</button>
+        <div class="task-status" id="status-21">جاري التحميل...</div>
+      </article>
+    </div>
+
+    <p id="taskMessage" role="status"></p>
+
+    <section class="task-history">
+      <h2>سجل المهام</h2>
+      <div id="taskHistory">جاري تحميل السجل...</div>
+    </section>
+
+    <p style="color:#718096;font-size:13px;margin-top:20px">
+      المكافآت المعروضة مبدئية ومعلقة، ولا تصبح قابلة للسحب إلا بعد تمويلها فعلياً والتحقق المحاسبي منها.
+    </p>
+  </main>
+
+  <script src="/js/tasks.js"></script>
+<script src="/js/daily-progress.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+
+<button id="exportMyTasks" type="button"
+style="display:block;margin:20px auto;padding:12px 22px;border:0;border-radius:9px;background:#173e70;color:white;cursor:pointer">
+????? ??? ?????
+</button>
+<script src="/js/task-history-export.js"></script>
+
+<section id="nextTaskCountdown" style="max-width:650px;margin:20px auto;padding:22px;background:#173e70;color:white;border-radius:15px;text-align:center">
+  <h2>???? ?????? ???????</h2>
+  <p id="nextTaskName">???? ????? ??????...</p>
+  <div id="nextTaskTimer" style="font-size:32px;font-weight:bold;direction:ltr">--:--:--</div>
+  <small>??????? ???????: ????</small>
+</section>
+<script src="/js/next-task-countdown.js"></script>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+<link rel="stylesheet" href="/css/weekly-task-summary.css">
+<script src="/js/weekly-task-summary.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>سجل النشاط | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body{font-family:Arial,sans-serif;margin:0;background:#f5f6fa;color:#202638}
+    main{max-width:900px;margin:35px auto;padding:20px}
+    .panel{background:white;border-radius:14px;padding:22px;box-shadow:0 3px 15px #0000000d}
+    h1{margin-top:0;font-size:25px}
+    .item{padding:15px 5px;border-bottom:1px solid #eee}
+    .item:last-child{border:0}
+    .type{font-weight:bold;margin-bottom:6px}
+    .date{font-size:13px;color:#777}
+    .details{font-size:14px;color:#555;margin-top:6px}
+    .message{padding:20px;text-align:center;color:#777}
+    a{color:#176b55;text-decoration:none}
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="/dashboard.html">← العودة إلى لوحة الحساب</a></p>
+    <section class="panel">
+      <h1>سجل نشاط الحساب</h1>
+      <p>آخر العمليات والتغييرات التي تمت على حسابك.</p>
+      <div id="activityList" class="message">جارٍ تحميل سجل النشاط...</div>
+    </section>
+  </main>
+  <script src="/js/activity.js"></script>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

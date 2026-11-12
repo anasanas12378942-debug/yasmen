@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>كشف الحساب | ياسمين الشام</title>
+<style>
+body{font-family:Arial;background:#f2f5f9;color:#183047;margin:0;padding:20px}
+main{max-width:950px;margin:auto}
+.panel{background:white;padding:18px;border-radius:12px;margin:15px 0}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px;text-align:right;border-bottom:1px solid #e5eaf0}
+th{background:#eef5fc}
+.positive{color:#16834a}.negative{color:#c0392b}
+.note{color:#66788a;font-size:13px}
+.table-wrap{overflow-x:auto}
+@media(max-width:600px){body{padding:10px}th,td{padding:9px;font-size:13px}}
+</style>
+</head>
+<body>
+<main>
+<h1>كشف الحساب</h1>
+<p class="note">الحركات المالية المسجلة في دفتر المنصة.</p>
+<section class="panel">
+<h2>ملخص الحركات</h2>
+<p>إجمالي الإضافات: <strong id="credits">—</strong></p>
+<p>إجمالي الخصومات: <strong id="debits">—</strong></p>
+<p>عدد الحركات: <strong id="count">—</strong></p>
+</section>
+<section class="panel">
+<h2>تفاصيل الحركات</h2>
+<p id="message">جار تحميل كشف الحساب...</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>التاريخ</th><th>نوع الحركة</th><th>الحالة</th><th>المبلغ</th></tr></thead>
+<tbody id="entries"></tbody>
+</table>
+</div>
+</section>
+</main>
+<script src="/js/statement.js"></script>
+<script src="/js/statement-export.js"></script>
+</body>
+</html>

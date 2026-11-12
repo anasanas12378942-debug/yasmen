@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>التقرير الأسبوعي للمهام</title>
+  <link rel="stylesheet" href="/css/admin.css">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    main { max-width: 1100px; margin: 30px auto; padding: 20px; }
+    .summary { display:flex; flex-wrap:wrap; gap:15px; margin:20px 0; }
+    .card { padding:18px; border:1px solid #ddd; border-radius:12px; flex:1; min-width:160px; }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; }
+    th,td { padding:12px; border-bottom:1px solid #ddd; text-align:right; white-space:nowrap; }
+    button { padding:10px 16px; border:0; border-radius:8px; background:#176b4a; color:white; cursor:pointer; }
+  @media print { button { display:none !important; } body { background:white; } main { max-width:none; margin:0; } .card { break-inside:avoid; } }
+</style>
+</head>
+<body>
+  <main>
+    <h1>التقرير الأسبوعي للمهام</h1>
+    <p id="autoRefreshStatus" style="color:#176b4a">التحديث التلقائي: كل دقيقة</p>
+<p id="reportPeriod">جاري تحميل التقرير...</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:20px 0">
+  <label>من تاريخ
+    <input type="date" id="reportFrom" style="display:block;padding:10px;margin-top:6px">
+  </label>
+  <label>إلى تاريخ
+    <input type="date" id="reportTo" style="display:block;padding:10px;margin-top:6px">
+  </label>
+  <button type="button" id="applyReportDates">عرض الفترة</button>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0">
+  <button type="button" data-report-days="1">اليوم</button>
+  <button type="button" data-report-days="7">7 أيام</button>
+  <button type="button" data-report-days="30">30 يوما</button>
+  <button type="button" data-report-days="90">90 يوما</button>
+</div>
+<p id="reportError" role="alert"></p>
+    <div class="summary">
+<div class="card" style="flex:1;min-width:180px">
+  العضو الأكثر إنجازا<br>
+  <strong id="topTaskMember">—</strong>
+</div>
+      <div class="card">عدد الأعضاء<br><strong id="memberCount">—</strong></div>
+      <div class="card">المهام المنجزة<br><strong id="taskCount">—</strong></div>
+      <div class="card">المكافآت المسجلة<br><strong id="rewardTotal">—</strong></div>
+    </div>
+    <section style="margin:25px 0;padding:18px;border:1px solid #ddd;border-radius:12px">
+  <h2>إنجاز المهام يوما بيوم</h2>
+<button type="button" id="downloadDailyReport">تنزيل النشاط اليومي CSV</button>
+  <div id="dailyTaskChart" style="display:flex;align-items:end;gap:8px;min-height:190px;overflow-x:auto;padding:15px 4px">
+    جاري تحميل الرسم...
+  </div>
+</section>
+<section style="margin:25px 0;padding:18px;border:1px solid #ddd;border-radius:12px">
+  <h2>المكافآت المسجلة يوميا</h2>
+  <div id="dailyRewardChart" style="display:flex;align-items:end;gap:10px;min-height:180px;overflow-x:auto;padding:15px 4px">
+    جاري تحميل المكافآت...
+  </div>
+</section>
+<button type="button" id="downloadReport">تنزيل التقرير CSV</button>
+<button type="button" id="printReport">طباعة التقرير</button>
+    <div style="margin:18px 0">
+  <label for="memberSearch">البحث عن عضو:</label>
+  <input id="memberSearch" type="search" placeholder="اكتب رقم الهاتف أو البريد الإلكتروني"
+    style="width:100%;max-width:420px;padding:12px;margin-top:8px;border:1px solid #ccc;border-radius:8px">
+</div>
+<div style="margin:15px 0">
+  <label for="memberSort">ترتيب الأعضاء:</label>
+  <select id="memberSort" style="padding:10px;border:1px solid #ccc;border-radius:8px">
+    <option value="tasks">الأكثر إنجازا للمهام</option>
+    <option value="rewards">الأعلى مكافآت</option>
+    <option value="days">الأكثر نشاطا</option>
+    <option value="newest">رقم العضو من الأحدث</option>
+  </select>
+</div>
+<div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>رقم العضو</th>
+            <th>الهاتف</th>
+            <th>البريد الإلكتروني</th>
+            <th>المهام</th>
+            <th>أيام النشاط</th>
+<th>متوسط المهام يوميا</th>
+<th>نسبة الإنجاز</th>
+            <th>المكافآت المسجلة</th>
+          </tr>
+        </thead>
+        <tbody id="reportRows"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="/js/admin-weekly-tasks.js"></script>
+<script src="/js/admin-daily-rewards.js"></script>
+<script src="/js/admin-weekly-export.js"></script>
+<script src="/js/admin-reward-comparison.js"></script>
+<script src="/js/admin-weekly-link.js"></script>
+<script src="/js/admin-report-timestamp.js"></script>
+</body>
+</html>

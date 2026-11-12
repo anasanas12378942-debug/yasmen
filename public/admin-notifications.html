@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إشعارات الإدارة | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-page{max-width:850px;margin:30px auto;padding:20px}
+    .panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:20px;margin-top:20px}
+    .notification{padding:15px 0;border-bottom:1px solid #e2e8f0}
+    .notification:last-child{border-bottom:0}
+    .notification small{display:block;color:#64748b;margin-top:6px}
+    .notification button{margin-top:10px}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>إشعارات الإدارة</small></span>
+    </a>
+    <a class="btn btn-light" href="/admin.html">لوحة الإدارة</a>
+  </header>
+
+  <main class="admin-page">
+    <h1>إشعارات الإدارة</h1>
+
+    <section class="panel">
+      <button class="btn btn-light" id="refreshNotifications" type="button">
+        تحديث الإشعارات
+      </button>
+      <p id="notificationMessage" role="status"></p>
+      <div id="notificationList" aria-live="polite">
+        جارٍ تحميل الإشعارات...
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/admin-notifications.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

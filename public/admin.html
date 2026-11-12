@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة الإدارة | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-page{max-width:1100px;margin:30px auto;padding:20px}
+    .admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:15px;margin-top:25px}
+    .admin-card{background:white;border:1px solid #e2e8f0;border-radius:13px;padding:20px}
+    .admin-card strong{display:block;font-size:28px;margin-top:12px}
+    .admin-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:25px}
+    .admin-links a{display:block;background:white;border:1px solid #e2e8f0;border-radius:10px;padding:16px;text-decoration:none;color:inherit}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>لوحة الإدارة</small></span>
+    </a>
+    <button class="btn btn-light" id="adminLogout">تسجيل الخروج</button>
+  </header>
+
+  <main class="admin-page">
+    <h1>لوحة تحكم المدير</h1>
+    <p>نظرة عامة على نشاط المنصة.</p>
+
+    <section class="admin-grid">
+      <article class="admin-card">إجمالي الأعضاء<strong id="usersCount">—</strong></article>
+      <article class="admin-card">الإيداعات المعلقة<strong id="depositsCount">—</strong></article>
+      <article class="admin-card">السحوبات المعلقة<strong id="withdrawalsCount">—</strong></article>
+      <article class="admin-card">المهام المسجلة<strong id="tasksCount">—</strong></article>
+    </section>
+
+    <h2 style="margin-top:35px">إدارة المنصة</h2>
+
+    <nav class="admin-links">
+      <a href="/admin-users.html">👥 إدارة الأعضاء</a>
+      <a href="/admin-deposits.html">💰 مراجعة الإيداعات</a>
+      <a href="/admin-withdrawals.html">💳 إدارة السحوبات</a>
+      <a href="/admin-profits.html">📊 الأرباح الممولة</a>
+      <a href="/admin-task-funding.html">🎯 تمويل مكافآت المهام</a>
+      <a href="/admin-reports.html">📑 التقارير المالية</a>
+      <a href="/admin-settings.html">⚙️ إعدادات المنصة</a>
+      <a href="/admin-support.html">🎧 طلبات الدعم</a>
+      <a href="/admin-moderation.html">🛡️ الإشراف والمراقبة</a>
+      <a href="/admin-backups.html">💾 النسخ الاحتياطي</a>
+    </nav>
+
+    <p id="adminMessage" role="status"></p>
+  <section style="background:#eef5fc;padding:15px;border-radius:10px;margin:15px 0"><h2>إدارة التداول</h2><p>المحفظة وعمليات الشراء والبيع وسجل التداول الخاص بالمدير.</p><a href="/admin-trading.html" style="display:inline-block;background:#174d7a;color:white;padding:11px 18px;border-radius:8px;text-decoration:none">فتح لوحة التداول</a></section><section style="background:#eef5fc;padding:15px;border-radius:10px;margin:15px 0"><h2>إدارة أسعار السوق</h2><p>تعديل أسعار الأصول التي يشاهدها الأعضاء.</p><a href="/api/admin/market-assets/page" style="display:inline-block;background:#174d7a;color:white;padding:11px 18px;border-radius:8px;text-decoration:none">إدارة الأسعار</a></section></main>
+
+  <script src="/js/admin.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<p><a class="btn btn-light" href="/admin-consents.html">سجل موافقات الأعضاء</a></p><div style="margin:15px 0"><a class="btn btn-primary" href="/admin-activity.html">سجل نشاط الأعضاء</a></div>
+<a class="btn btn-primary" href="/admin-announcements.html">????? ??????? ??????</a>
+<a class="btn btn-primary" href="/admin-task-report.html">????? ?????? ???????</a>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+<a href="/admin-weekly-tasks.html" class="admin-weekly-report-link">📊 التقرير الأسبوعي للمهام</a>
+<style>
+.admin-weekly-report-link {
+  display: inline-block;
+  margin: 12px;
+  padding: 12px 18px;
+  border-radius: 9px;
+  background: #176b4a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
+</body>
+</html>

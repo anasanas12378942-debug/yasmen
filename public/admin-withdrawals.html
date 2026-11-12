@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إدارة السحوبات | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-page{max-width:1100px;margin:30px auto;padding:20px}
+    .panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:20px;margin-top:20px}
+    .table-wrap{overflow-x:auto}
+    table{width:100%;min-width:750px;border-collapse:collapse}
+    th,td{text-align:right;padding:13px;border-bottom:1px solid #e5e7eb}
+    th{background:#f5f8fc}
+    .actions{display:flex;gap:7px;flex-wrap:wrap}
+    .actions button{margin:2px}
+    .barcode{max-width:90px;max-height:90px;object-fit:contain}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>إدارة السحوبات</small></span>
+    </a>
+    <a class="btn btn-light" href="/admin.html">لوحة الإدارة</a>
+  </header>
+
+  <main class="admin-page">
+    <h1>إدارة السحوبات</h1>
+    <p>راجع الطلبات، وتحقق من بيانات التحويل قبل تأكيد الدفع.</p>
+
+    <section class="panel">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>الطلب</th>
+              <th>العضو</th>
+              <th>المبلغ</th>
+              <th>رسوم 10%</th>
+              <th>الصافي</th>
+              <th>الحالة</th>
+              <th>باركود العضو</th>
+              <th>الإجراءات</th>
+            </tr>
+          </thead>
+          <tbody id="withdrawalsRows">
+            <tr><td colspan="8">جارٍ تحميل الطلبات...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="withdrawalsMessage" role="status"></p>
+    </section>
+  </main>
+
+  <script src="/js/admin-withdrawals.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ملفي الشخصي | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .profile-page{max-width:750px;margin:35px auto;padding:20px}
+    .profile-card{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin-top:22px}
+    .profile-card label{display:block;margin:15px 0 7px}
+    .profile-card input,.profile-card select{width:100%;padding:12px;border:1px solid #d5dce5;border-radius:8px}
+    .barcode-section,.password-section{margin-top:25px;padding-top:20px;border-top:1px solid #e2e8f0}
+    .barcode-preview{max-width:180px;max-height:180px;object-fit:contain;display:none;margin-top:12px}
+    .password-field{display:flex;gap:8px;align-items:stretch}
+    .password-field input{flex:1;min-width:0}
+    .toggle-password{min-width:48px;border:1px solid #d5dce5;border-radius:8px;background:#f8fafc;cursor:pointer;font-size:20px}
+    .toggle-password:focus{outline:2px solid #2563eb;outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>YASMIN AL-SHAM</small></span>
+    </a>
+    <a class="btn btn-light" href="/dashboard.html">العودة للوحة العضو</a>
+  </header>
+
+  <main class="profile-page">
+    <h1>ملفي الشخصي</h1>
+    <p>إدارة معلومات حسابك وتفضيلات العرض.</p>
+
+    <section class="profile-card">
+      <form id="profileForm">
+        <label for="displayName">الاسم الظاهر</label>
+        <input id="displayName" maxlength="80" autocomplete="name">
+
+        <label for="language">لغة المنصة</label>
+        <select id="language">
+          <option value="ar">العربية</option>
+          <option value="en">English</option>
+        </select>
+
+        <label for="currency">العملة المفضلة للعرض</label>
+        <select id="currency">
+          <option value="USD">الدولار الأمريكي</option>
+          <option value="SYP">الليرة السورية</option>
+          <option value="EUR">اليورو</option>
+        </select>
+
+        <button class="btn btn-primary" type="submit" style="margin-top:20px">
+          حفظ التغييرات
+        </button>
+      </form>
+
+      <section class="password-section">
+        <h2>تغيير كلمة المرور</h2>
+        <p>أدخل كلمة المرور الحالية ثم اختر كلمة مرور جديدة.</p>
+
+        <form id="passwordForm">
+          <label for="currentPassword">كلمة المرور الحالية</label>
+          <div class="password-field">
+            <input id="currentPassword" type="password" autocomplete="current-password" required>
+            <button class="toggle-password" type="button" data-target="currentPassword" aria-label="إظهار كلمة المرور" aria-pressed="false">👁️</button>
+          </div>
+
+          <label for="newPassword">كلمة المرور الجديدة</label>
+          <div class="password-field">
+            <input id="newPassword" type="password" minlength="12" maxlength="72" autocomplete="new-password" required>
+            <button class="toggle-password" type="button" data-target="newPassword" aria-label="إظهار كلمة المرور" aria-pressed="false">👁️</button>
+          </div>
+
+          <label for="confirmPassword">تأكيد كلمة المرور الجديدة</label>
+          <div class="password-field">
+            <input id="confirmPassword" type="password" minlength="12" maxlength="72" autocomplete="new-password" required>
+            <button class="toggle-password" type="button" data-target="confirmPassword" aria-label="إظهار كلمة المرور" aria-pressed="false">👁️</button>
+          </div>
+
+          <button class="btn btn-primary" id="changePasswordButton" type="submit" style="margin-top:20px">
+            تغيير كلمة المرور
+          </button>
+          <p id="passwordMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="barcode-section">
+        <h2>باركود شام كاش</h2>
+        <p>ارفع صورة الباركود حتى تتمكن الإدارة من مراجعتها عند طلب السحب.</p>
+        <form id="barcodeForm">
+          <label for="barcodeFile">اختر صورة الباركود</label>
+          <input id="barcodeFile" type="file" accept="image/jpeg,image/png,image/webp" required>
+          <button class="btn btn-primary" type="submit" style="margin-top:15px">
+            رفع الباركود
+          </button>
+        </form>
+        <img id="barcodePreview" class="barcode-preview" alt="معاينة الباركود">
+        <p id="barcodeMessage" role="status"></p>
+      </section>
+
+      <p id="profileMessage" role="status"></p>
+    </section>
+  </main>
+
+  <script src="/js/profile.js"></script>
+  <footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+    <a href="/terms.html">الشروط والأحكام</a>
+    <span style="margin:0 12px">|</span>
+    <a href="/privacy.html">سياسة الخصوصية</a>
+    <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+    <span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+    <span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+    <span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+  </footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

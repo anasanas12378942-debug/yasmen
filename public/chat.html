@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الدردشة | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .chat-page{max-width:850px;margin:30px auto;padding:20px}
+    .chat-box{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-top:20px}
+    #messages{height:420px;overflow-y:auto;padding:12px;background:#f5f8fc;border-radius:10px}
+    .chat-message{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:12px;margin-bottom:10px}
+    .chat-message small{display:block;color:#64748b;margin-top:5px}
+    .chat-form{display:flex;gap:10px;margin-top:15px}
+    .chat-form input{flex:1;min-width:0;padding:12px;border:1px solid #d5dce5;border-radius:8px}
+    @media(max-width:500px){.chat-form{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>YASMIN AL-SHAM</small></span>
+    </a>
+    <a class="btn btn-light" href="/dashboard.html">العودة للوحة العضو</a>
+  </header>
+
+  <main class="chat-page">
+    <h1>الدردشة العامة</h1>
+    <p>مساحة للتواصل بين أعضاء المنصة.</p>
+
+    <section class="chat-box">
+      <div id="messages" aria-live="polite">
+        جارٍ تحميل الرسائل...
+      </div>
+
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" maxlength="1000" placeholder="اكتب رسالتك..." required>
+        <button class="btn btn-primary" type="submit">إرسال</button>
+      </form>
+
+      <p id="chatMessage" role="status"></p>
+    </section>
+  </main>
+
+  <script src="/js/chat.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>السوق | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/market.css">
+</head>
+<body>
+  <header class="top">
+    <a href="/dashboard.html">← لوحة التحكم</a>
+    <h1>السوق</h1>
+    <span>ياسمين الشام</span>
+  </header>
+  <main class="container">
+    <section class="notice">
+      <strong>مرحبا بك في السوق</strong>
+      <p>تصفح الأصول وتابع الأسعار والمفضلة. الأسعار المعروضة بيانات توضيحية.</p>
+    </section>
+    <section class="market-summary">
+      <div><span>عدد الأصول</span><strong id="assetCount">8</strong></div>
+      <div><span>حالة السوق</span><strong class="open">متاح للعرض</strong></div>
+    </section>
+    <section class="controls">
+      <input id="assetSearch" type="search" placeholder="ابحث عن أصل...">
+      <select id="assetSort">
+        <option value="name">ترتيب حسب الاسم</option>
+        <option value="priceHigh">السعر من الأعلى للأقل</option>
+        <option value="priceLow">السعر من الأقل للأعلى</option>
+        <option value="changeHigh">أعلى تغير</option>
+        <option value="changeLow">أقل تغير</option>
+      </select>
+    </section>
+    <section class="asset-grid" id="assetGrid"></section>
+  </main>
+  <script src="/js/market.js"></script>
+  <script src="/js/market-chart.js"></script>
+<script src="/js/market-price-chart.js"></script>
+<script src="/js/market-refresh-control.js"></script>
+</body>
+</html>

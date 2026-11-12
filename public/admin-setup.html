@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إعداد المدير الأول | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .setup-page{max-width:550px;margin:40px auto;padding:20px}
+    .panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:24px}
+    label{display:block;margin:15px 0 7px}
+    input{width:100%;padding:12px;border:1px solid #d5dce5;border-radius:8px}
+  </style>
+</head>
+<body>
+  <main class="setup-page">
+    <section class="panel">
+      <h1>إعداد المدير الأول</h1>
+      <p>هذه الصفحة مخصصة لإنشاء حساب المدير الأعلى لأول مرة.</p>
+
+      <form id="setupForm">
+        <label for="contact">هاتف المدير أو بريده الإلكتروني</label>
+        <input id="contact" required>
+
+        <label for="password">كلمة مرور المدير</label>
+        <input id="password" type="password" minlength="12" required>
+
+        <label for="setupToken">رمز الإعداد السري</label>
+        <input id="setupToken" type="password" required>
+
+        <button class="btn btn-primary" type="submit" style="margin-top:20px">
+          إنشاء حساب المدير
+        </button>
+      </form>
+
+      <p id="setupMessage" role="status"></p>
+    </section>
+  </main>
+
+  <script src="/js/admin-setup.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

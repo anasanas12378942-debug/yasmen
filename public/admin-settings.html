@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إعدادات المنصة | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-page{max-width:750px;margin:30px auto;padding:20px}
+    .panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin-top:20px}
+    label{display:block;margin:15px 0 7px}
+    input,textarea{width:100%;padding:12px;border:1px solid #d5dce5;border-radius:8px}
+    textarea{min-height:100px}
+    input[type=color]{height:48px;padding:4px}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>إعدادات المنصة</small></span>
+    </a>
+    <a class="btn btn-light" href="/admin.html">لوحة الإدارة</a>
+  </header>
+
+  <main class="admin-page">
+    <h1>إعدادات المنصة</h1>
+
+    <section class="panel">
+      <form id="settingsForm">
+        <label for="platformName">اسم المنصة</label>
+        <input id="platformName" maxlength="100" required>
+
+        <label for="description">وصف المنصة</label>
+        <textarea id="description" maxlength="1000"></textarea>
+
+        <label for="primaryColor">اللون الأساسي</label>
+        <input id="primaryColor" type="color" value="#173b68">
+
+        <label for="secondaryColor">اللون الثانوي</label>
+        <input id="secondaryColor" type="color" value="#d4af37">
+
+        <label for="logoUrl">رابط الشعار</label>
+        <input id="logoUrl" type="url" placeholder="https://example.com/logo.png">
+
+        <button class="btn btn-primary" type="submit" style="margin-top:20px">
+          حفظ الإعدادات
+        </button>
+      </form>
+      <p id="settingsMessage" role="status"></p>
+    </section>
+  </main>
+
+  <script src="/js/admin-settings.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

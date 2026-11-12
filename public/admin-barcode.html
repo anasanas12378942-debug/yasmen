@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>باركود الإيداع | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-page{max-width:750px;margin:30px auto;padding:20px}
+    .panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin-top:20px}
+    .preview{max-width:260px;max-height:260px;object-fit:contain;display:block;margin:20px auto}
+    input[type=file]{display:block;width:100%;margin:15px 0}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>باركود الإيداع</small></span>
+    </a>
+    <a class="btn btn-light" href="/admin.html">لوحة الإدارة</a>
+  </header>
+
+  <main class="admin-page">
+    <h1>باركود شام كاش للمنصة</h1>
+
+    <section class="panel">
+      <h2>الباركود الحالي</h2>
+      <img id="barcodePreview" class="preview" alt="باركود إيداع المنصة" hidden>
+      <p id="barcodeMessage" role="status">جارٍ تحميل الباركود...</p>
+    </section>
+
+    <section class="panel">
+      <h2>تغيير الباركود</h2>
+      <form id="barcodeForm">
+        <label for="barcodeFile">اختر صورة الباركود</label>
+        <input id="barcodeFile" type="file" accept="image/png,image/jpeg,image/webp" required>
+        <button class="btn btn-primary" type="submit">حفظ الباركود</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/admin-barcode.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

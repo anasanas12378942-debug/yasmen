@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>إدارة أسعار السوق</title>
+<style>
+body{font-family:Arial;background:#f2f5f9;color:#183047;padding:20px}
+main{max-width:850px;margin:auto}
+.panel{background:white;padding:18px;border-radius:12px;margin:15px 0}
+.row{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:center;border-bottom:1px solid #eee;padding:12px 0}
+input,button{padding:11px;border:1px solid #ccd5df;border-radius:8px;font-size:16px}
+button{background:#174d7a;color:white;border:0;cursor:pointer}
+#message{padding:12px;margin:10px 0;border-radius:8px}
+@media(max-width:550px){.row{grid-template-columns:1fr 1fr}.row button{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<main>
+<h1>إدارة أسعار السوق</h1>
+<p>هذه الأسعار تجريبية لأغراض المحاكاة وليست أسعارا حقيقية.</p>
+<div id="message" hidden></div>
+<section class="panel">
+<div id="assets">جار تحميل الأسعار...</div>
+</section>
+</main>
+<script src="/api/admin/market-assets/app.js"></script>
+</body>
+</html>

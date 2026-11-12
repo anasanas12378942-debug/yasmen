@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الأرباح الممولة | ياسمين الشام</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .admin-page{max-width:750px;margin:30px auto;padding:20px}
+    .panel{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin-top:20px}
+    label{display:block;margin:15px 0 7px}
+    input,textarea{width:100%;padding:12px;border:1px solid #d5dce5;border-radius:8px}
+    textarea{min-height:100px}
+    .warning{background:#fff7e6;border:1px solid #f0d28a;border-radius:9px;padding:13px;margin-top:15px}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html">
+      <span class="brand-mark">Y</span>
+      <span><strong>ياسمين الشام</strong><small>الأرباح الممولة</small></span>
+    </a>
+    <a class="btn btn-light" href="/admin.html">لوحة الإدارة</a>
+  </header>
+
+  <main class="admin-page">
+    <h1>تسجيل الأرباح الممولة</h1>
+
+    <section class="panel">
+      <div class="warning">
+        لا تسجل أي مبلغ كربح قابل للسحب إلا بعد وجود أموال فعلية مخصصة له والتحقق من توفرها.
+      </div>
+
+      <form id="profitForm">
+        <label for="userId">رقم العضو</label>
+        <input id="userId" type="number" min="1" required>
+
+        <label for="amount">المبلغ بالدولار</label>
+        <input id="amount" type="number" min="0.01" step="0.01" required>
+
+        <label for="note">مصدر التمويل وملاحظات التوثيق</label>
+        <textarea id="note" maxlength="1000" required></textarea>
+
+        <button class="btn btn-primary" type="submit" style="margin-top:18px">
+          تسجيل الربح الممول
+        </button>
+      </form>
+
+      <p id="profitMessage" role="status"></p>
+    </section>
+  </main>
+
+  <script src="/js/admin-profits.js"></script>
+<footer style="text-align:center;padding:22px;margin-top:30px;border-top:1px solid #e5e7eb">
+  <a href="/terms.html">الشروط والأحكام</a>
+  <span style="margin:0 12px">|</span>
+  <a href="/privacy.html">سياسة الخصوصية</a>
+  <p style="font-size:13px;color:#758398">© ياسمين الشام</p>
+<span style="margin:0 12px">|</span><a href="/faq.html">الأسئلة الشائعة</a>
+<span style="margin:0 12px">|</span><a href="/about.html">من نحن</a>
+<span style="margin:0 12px">|</span><a href="/contact.html">تواصل معنا</a>
+</footer>
+<script src="/js/accessibility-controls.js"></script>
+<script src="/js/network-status.js"></script>
+<script src="/js/back-to-top.js"></script>
+</body>
+</html>

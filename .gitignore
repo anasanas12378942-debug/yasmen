@@ -1,0 +1,11 @@
+﻿node_modules/
+.env
+storage/
+uploads/
+backups/
+
+# Local audit files
+check-api.js
+check-db.js
+database-audit.js
+project-audit.txt
